@@ -1,25 +1,23 @@
-# draw-a-ui
-
-This is an app that uses tldraw and the gpt-4-vision api to generate html based on a wireframe you draw.
-
-> I'm currently working on a hosted version of draw-a-ui. You can join the waitlist at [draw-a-ui.com](https://draw-a-ui.com). The core of it will always be open source and available here.
-
-![A demo of the app](./demo.gif)
-
-This works by just taking the current canvas SVG, converting it to a PNG, and sending that png to gpt-4-vision with instructions to return a single html file with tailwind.
-
-> Disclaimer: This is a demo and is not intended for production use. It doesn't have any auth so you will go broke if you deploy it.
-
-## Getting Started
-
-This is a Next.js app. To get started run the following commands in the root directory of the project. You will need an OpenAI API key with access to the GPT-4 Vision API.
-
-> Note this uses Next.js 14 and requires a version of `node` greater than 18.17. [Read more here](https://nextjs.org/docs/pages/building-your-application/upgrading/version-14).
-
-```bash
-echo "OPENAI_API_KEY=sk-your-key" > .env.local
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">绘制用户界面</font></font></h1><a id="user-content-draw-a-ui" class="anchor" aria-label="永久链接：draw-a-ui" href="#draw-a-ui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是一个使用 tldraw 和 gpt-4-vision api 根据您绘制的线框生成 html 的应用程序。</font></font></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我目前正在开发draw-a-ui 的托管版本。您可以在</font></font><a href="https://draw-a-ui.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">draw-a-ui.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加入候补名单</font><font style="vertical-align: inherit;">。它的核心将始终是开源的并可在此处获取。</font></font></p>
+</blockquote>
+<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="/SawyerHood/draw-a-ui/blob/main/demo.gif" data-target="animated-image.originalLink"><img src="/SawyerHood/draw-a-ui/raw/main/demo.gif" alt="该应用程序的演示" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+     
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其工作原理是获取当前画布 SVG，将其转换为 PNG，然后将该 png 发送到 gpt-4-vision，并附有指令以返回带有 tailwind 的单个 html 文件。</font></font></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免责声明：这是一个演示，不适用于生产用途。它没有任何身份验证，因此如果部署它，您就会破产。</font></font></p>
+</blockquote>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">入门</font></font></h2><a id="user-content-getting-started" class="anchor" aria-label="永久链接：开始使用" href="#getting-started"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是一个 Next.js 应用程序。首先，在项目的根目录中运行以下命令。您将需要一个能够访问 GPT-4 Vision API 的 OpenAI API 密钥。</font></font></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"></font><code>node</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，这使用 Next.js 14 并且需要高于 18.17</font><font style="vertical-align: inherit;">的版本。</font></font><a href="https://nextjs.org/docs/pages/building-your-application/upgrading/version-14" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里阅读更多内容</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</blockquote>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>OPENAI_API_KEY=sk-your-key<span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> .env.local
 npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+npm run dev</pre><div class="zeroclipboard-container">
+    
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用浏览器打开</font></font><a href="http://localhost:3000" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://localhost:3000</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查看结果。</font></font></p>
+</article></div>
