@@ -3,8 +3,8 @@
 <blockquote>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我目前正在开发draw-a-ui 的托管版本。您可以在</font></font><a href="https://draw-a-ui.com" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">draw-a-ui.com</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加入候补名单</font><font style="vertical-align: inherit;">。它的核心将始终是开源的并可在此处获取。</font></font></p>
 </blockquote>
-<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="/SawyerHood/draw-a-ui/blob/main/demo.gif" data-target="animated-image.originalLink"><img src="/SawyerHood/draw-a-ui/raw/main/demo.gif" alt="该应用程序的演示" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
-     
+<p dir="auto"><animated-image data-catalyst=""><a target="_blank" rel="noopener noreferrer" href="https://github.com/SawyerHood/draw-a-ui/blob/main/demo.gif" data-target="animated-image.originalLink"><img src="https://github.com/SawyerHood/draw-a-ui/raw/main/demo.gif" alt="该应用程序的演示" style="max-width: 100%; display: inline-block;" data-target="animated-image.originalImage"></a>
+      
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其工作原理是获取当前画布 SVG，将其转换为 PNG，然后将该 png 发送到 gpt-4-vision，并附有指令以返回带有 tailwind 的单个 html 文件。</font></font></p>
 <blockquote>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">免责声明：这是一个演示，不适用于生产用途。它没有任何身份验证，因此如果部署它，您就会破产。</font></font></p>
@@ -17,7 +17,7 @@
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">"</span>OPENAI_API_KEY=sk-your-key<span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> .env.local
 npm install
 npm run dev</pre><div class="zeroclipboard-container">
-    
+   
   </div></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用浏览器打开</font></font><a href="http://localhost:3000" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://localhost:3000</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查看结果。</font></font></p>
 </article></div>
